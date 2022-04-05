@@ -4,7 +4,7 @@ const express = require("express");
 const apiRoutes = require("./routes/api");
 const connection = require("./database");
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 const cors = require("cors")
 
 
