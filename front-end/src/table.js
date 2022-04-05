@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
 function Tables() {
+    const [book,setBook] = useState([])
+    useEffect(()=>{
+        fetch("http://13.251.156.158:3000/api/books")
+        .then((data)=> data.json())
+        .then((res)=> console.log(res))
+        .catch((err)=> console.log(err))
+
+    })
   return (
     <div className="container table">
       <Table striped bordered hover>
@@ -13,8 +22,6 @@ function Tables() {
             <th>isbn</th>
             <th>Publisher</th>
             <th>Published on</th>
-            <th></th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -26,8 +33,8 @@ function Tables() {
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td><img src="/img/edit.svg" alt="svg" /></td>
+            <td><img src="/img/delete.svg" alt="svg" /></td>
           </tr>
           <tr>
             <td>2</td>
@@ -37,8 +44,8 @@ function Tables() {
             <td>Jacob</td>
             <td>Thornton</td>
             <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td><img src="/img/edit.svg" alt="svg" /></td>
+            <td><img src="/img/delete.svg" alt="svg" /></td>
           </tr>
           <tr>
             <td>3</td>
@@ -48,8 +55,8 @@ function Tables() {
             <td>@twitter</td>
             <td>@twitter</td>
             <td>@twitter</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
+            <td><img src="/img/edit.svg" alt="svg" /></td>
+            <td><img src="/img/delete.svg" alt="svg" /></td>
           </tr>
         </tbody>
       </Table>

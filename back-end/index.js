@@ -4,11 +4,13 @@ const express = require("express");
 const apiRoutes = require("./routes/api");
 const connection = require("./database");
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
+const cors = require("cors")
 
 
 app.use(express.json());
 app.use(express.static("static"));
+app.use(cors())
 app.use("/api", apiRoutes);
 
 app.all("*", (req, res, next) => {
