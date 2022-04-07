@@ -9,5 +9,4 @@ router.post("/createBooks",bookController.create);
 router.put("/updateBooks/id/:id",bookController.update);
 router.delete("/deleteBooks/id/:id",bookController.delete_book);
 
-
 module.exports = router;
