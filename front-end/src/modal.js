@@ -206,7 +206,6 @@ console.log(props)
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Control
                   type="date"
-                  placeholder="Published On"
                   autoFocus
                 />
               </Form.Group>

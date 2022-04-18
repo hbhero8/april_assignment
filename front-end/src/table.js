@@ -32,7 +32,7 @@ function Tables() {
         </thead>
         <tbody>
         {book.map((data, index) => (
-            <tr>
+            <tr key={index}>
               <td>{index + 1}</td>
               <td>{data.name}</td>
               <td>${data.price}</td>
